@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doorbook - Fire Door Installation Booking</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Doorbook</h1>
+      <p>Book your fire door installation appointment</p>
+    </div>
+  </header>
+  <main class="container">
+    <form id="bookingForm">
+      <section class="step" id="step1">
+        <h2>Enter your address</h2>
+        <label for="postcode">Postcode</label>
+        <input type="text" id="postcode" name="postcode" placeholder="e.g. IP27 9AB" required pattern="[A-Za-z]{1,2}[0-9][A-Za-z0-9]? [0-9][A-Za-z]{2}" title="UK postcode format">
+        <button type="button" id="lookupBtn">Look up</button>
+        <div id="addressResult"></div>
+        <label for="houseNumber">House number or name</label>
+        <input type="text" id="houseNumber" name="houseNumber" required>
+      </section>
+      <section class="step" id="step2" style="display:none;">
+        <h2>Select date and time</h2>
+        <div id="slots"></div>
+      </section>
+      <section class="step" id="step3" style="display:none;">
+        <h2>Your details</h2>
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" required>
+        <label>
+          <input type="checkbox" id="gdpr" required>
+          I agree to the privacy notice and consent to my data being used to book and manage my fire door installation appointment. See <a href="#privacy" id="privacyLink">privacy notice</a>.
+        </label>
+      </section>
+      <button type="submit" id="submitBtn" style="display:none;">Book Appointment</button>
+    </form>
+    <div id="confirmation" style="display:none;"></div>
+    <div id="privacy" class="privacy-notice" style="display:none;">
+      <h3>Privacy Notice</h3>
+      <p>We collect your name, email, phone, address and preferred appointment time solely to arrange and carry out fire door installation work. Data is kept only as long as needed for the job and any warranty period. You can request access, correction or deletion by contacting us. Lawful basis: contract performance and legitimate interests for the service. We do not share your data with third parties except installers working on the job. Source: ICO guidance on the right to be informed under UK GDPR.</p>
+      <button type="button" id="closePrivacy">Close</button>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Doorbook. UK fire door booking service.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

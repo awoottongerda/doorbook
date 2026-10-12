@@ -1,0 +1,67 @@
+:root {
+  --paper: #F4F1EB;
+  --door-green: #1C453B;
+  --accent: #2E6B5A;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--paper);
+  color: var(--door-green);
+  margin: 0;
+  line-height: 1.5;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+header {
+  background: var(--door-green);
+  color: var(--paper);
+  padding: 1.5rem 0;
+  text-align: center;
+}
+header h1 { margin: 0; font-size: 2rem; }
+form {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(28,69,59,0.1);
+}
+label { display: block; margin-top: 1rem; font-weight: 600; }
+input[type="text"], input[type="email"], input[type="tel"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 0.25rem;
+}
+button {
+  background: var(--door-green);
+  color: var(--paper);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+button:hover { background: var(--accent); }
+.slot {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--door-green);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.slot.selected { background: var(--door-green); color: var(--paper); }
+.privacy-notice {
+  background: white;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 1px solid var(--door-green);
+}
+footer { text-align: center; padding: 2rem 0; font-size: 0.9rem; }
+#confirmation { background: #e8f5e9; padding: 1rem; border-radius: 4px; margin-top: 1rem; }
